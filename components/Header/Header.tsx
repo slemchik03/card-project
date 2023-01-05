@@ -7,7 +7,7 @@ const Header = () => {
     <div className="grid grid-flow-col justify-between pt-8 font-poppins items-center">
       <Image width={134} height={30} src={"/header-logo.png"} alt="logo img" />
       <div className="hidden xl:grid grid-cols-[minmax(0,3fr),minmax(0,1fr)]">
-        <div className="grid grid-flow-col gap-[48px]">
+        <div className="grid font-semibold text-[16px] grid-flow-col gap-[48px]">
           <Link href={"/"}>Demos</Link>
           <Link href={"/"}>Features</Link>
           <Link href={"/"}>Pricing</Link>
@@ -18,7 +18,7 @@ const Header = () => {
         <Link className="orange-button w-[133px] py-3 px-8" href={"/"}>
           Signin
         </Link>
-        <Link href={"/"}>Signup</Link>
+        <Link className="text-[#FF553E]" href={"/"}>Signup</Link>
       </div>
       <div className="block xl:hidden">
         <BurgerMenu />
