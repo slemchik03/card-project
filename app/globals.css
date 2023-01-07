@@ -9,13 +9,69 @@
 }
 
 .burger {
-    @apply grid relative grid-flow-row w-[35px] h-[30px] cursor-pointer;
+  --burger-height: 20px;
+  --stick-width: 30px;
+  --stick-height: 4px;
+  --stick-color: #FF553E;
+  --transition-duration: 0.1s;
+  
+  position: relative;
+  width: var(--stick-width);
+  height: var(--burger-height);
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.burger div{
-    @apply w-[35px] h-[4px] top-[50%] left-[50%] bg-[#FF553E] rounded-[4px];
+.stick {
+  position: absolute;
+  height: var(--stick-height);
+  width: var(--stick-width);
+  background-color: var(--stick-color);
+  border-radius: 2px;
+  transition: transform ease-in-out, width ease-in-out;
+  transition-duration: var(--transition-duration);
+}
+
+.stick:nth-child(1) {
+  top: 0;
+}
+
+.stick:nth-child(2),
+.stick:nth-child(3),
+.stick:nth-child(4) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.stick:nth-child(5) {
+  bottom: 0;
+}
+
+.burger.active .stick:nth-child(even) {
+  transition-delay: var(--transition-duration);
+}
+
+.burger:not(.active) .stick:nth-child(odd) {
+  transition-delay: var(--transition-duration);
+}
+
+.burger.active .stick:nth-child(odd) {
+  width: 0;
+}
+
+.burger.active .stick:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.burger.active .stick:nth-child(4) {
+  transform: rotate(-45deg);
 }
 
 .orange-button {
     @apply bg-[#FF553E] text-[#ffffff] text-[18px] rounded-[40px] text-center;
+}
+
+.section-title {
+  @apply font-semibold text-[28px] sm:text-[30px] md:text-[36px] xl:text-[48px] text-[#18063C];
 }
