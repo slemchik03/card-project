@@ -2,7 +2,8 @@ import ExellentFeatures from "../components/ExellentFeatures/ExellentFeatures";
 import Header from "../components/Header/Header";
 import Intro from "../components/Intro";
 
-export default function Home() {
+
+export default async function Home() {
   return (
     <div>
       <div className="bg-[#FFF8F2] min-h-[70vh] xl:min-h-[90vh] ">

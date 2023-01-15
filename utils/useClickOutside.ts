@@ -9,7 +9,7 @@ export default function useClickOutside<T extends HTMLElement>(ref: React.RefObj
     }
   }, [ref]);
 
-  
+
   useEffect(() => {
     // setTimeout here for fix closing after mount
     setTimeout(() => window.addEventListener("click", clicksHandler), 0);

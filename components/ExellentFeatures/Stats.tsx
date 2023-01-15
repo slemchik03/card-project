@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 const Stats: FC = () => {
+
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[700px] text-center pt-[140px] xl:pt-[100px]">
       <div className="grid gap-[10px] justify-center">

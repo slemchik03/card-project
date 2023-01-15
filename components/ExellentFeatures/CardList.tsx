@@ -28,7 +28,7 @@ const CardList: FC = () => {
       {
         cardsInfo.map((info, i) => {
           return (
-            <Card {...info} />
+            <Card key={i} {...info} />
           )
         })
       }
